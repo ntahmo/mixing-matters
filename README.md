@@ -48,11 +48,9 @@ Numerical examples are **synthetic and educational**, not population estimates. 
 
 *Mixing Matters* is an evolving open educational resource, not a systematic review or peer-reviewed model. Applying the methods to a study requires data assessment, substantive expertise, uncertainty analysis, and appropriate validation.
 
-The AI material addresses how AI can assist with explanation, coding, literature organization, and model checking while emphasizing independent verification of scientific claims and equations.
-
 ## Contributing and reuse
 
-Suggestions, corrections, additional examples, and other contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) or [open an issue](https://github.com/ntahmo/mixing-matters/issues).
+Mixing Matters was created and is maintained by Nancy B. Tahmo, with AI assistance from OpenAI's ChatGPT in content development, coding, and website design. Scientific sources are appropriately cited, and contributions are welcome. Suggestions, corrections, additional examples, and other contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) or [open an issue](https://github.com/ntahmo/mixing-matters/issues).
 
 Original materials in this repository are shared under the [MIT License](LICENSE). Third-party publications remain subject to their respective rights.
 
@@ -67,3 +65,5 @@ A versioned scholarly citation can be added if the project receives an archived 
 ---
 
 **[Visit Mixing Matters](https://ntahmo.github.io/mixing-matters/)** · **[View the repository](https://github.com/ntahmo/mixing-matters)**
+
+Copyright (c) 2026 Nancy B. Tahmo
