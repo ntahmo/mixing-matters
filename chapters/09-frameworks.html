@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="A shared idea implemented differently in ODEs, networks, agents, and stochastic processes."><title>Mixing beyond compartmental models · Mixing Matters</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip" href="#content">Skip to content</a><div class="layout"><aside class="sidebar"><div class="side-top"><a class="brand" href="../index.html"><span class="brand-icon">∿</span> Mixing Matters</a><p>Understanding how populations connect—and why the equations work.</p></div><details class="mobile-nav"><summary>☰ &nbsp; Browse lessons & tools</summary><div class="mobile-nav-content"><a href="../explorer.html">Matrix explorer</a><a href="../walkthrough.html">Guided derivation</a><a href="../decision.html">Decision guide</a><a href="../cheatsheet.html">Cheat sheet</a><a href="../technical.html">Technical derivations</a><a href="../references.html">References</a><a href="../chapters/01-why-mixing.html">1. Why mixing matters</a><a href="../chapters/02-language.html">2. The vocabulary of mixing</a><a href="../chapters/03-opportunities.html">3. From populations to opportunity shares</a><a href="../chapters/04-proportionate.html">4. Proportionate mixing, step by step</a><a href="../chapters/05-reciprocity.html">5. Reciprocity without mystery</a><a href="../chapters/06-assortativity.html">6. Assortativity and preferred mixing</a><a href="../chapters/07-two-axes.html">7. Two characteristics, one mixing matrix</a><a href="../chapters/08-data.html">8. Learning from empirical data</a><a href="../chapters/09-frameworks.html">9. Mixing beyond compartmental models</a><a href="../chapters/10-time.html">10. When mixing changes over time</a><a href="../chapters/11-transmission.html">11. From mixing to transmission</a><a href="../chapters/12-decisions.html">12. Choosing a mixing structure</a><a href="../chapters/13-ai.html">13. AI as a modeling assistant</a><a href="../chapters/14-applications.html">14. Four case studies</a><a href="../chapters/15-workbook.html">15. Exercises and worked answers</a></div></details><div class="side-label">LEARN · 15 CHAPTERS</div><nav aria-label="Chapter navigation"><a href="../chapters/01-why-mixing.html" ><span class="navnum">01</span><span>Why mixing matters</span></a><a href="../chapters/02-language.html" ><span class="navnum">02</span><span>The vocabulary of mixing</span></a><a href="../chapters/03-opportunities.html" ><span class="navnum">03</span><span>From populations to opportunity shares</span></a><a href="../chapters/04-proportionate.html" ><span class="navnum">04</span><span>Proportionate mixing, step by step</span></a><a href="../chapters/05-reciprocity.html" ><span class="navnum">05</span><span>Reciprocity without mystery</span></a><a href="../chapters/06-assortativity.html" ><span class="navnum">06</span><span>Assortativity and preferred mixing</span></a><a href="../chapters/07-two-axes.html" ><span class="navnum">07</span><span>Two characteristics, one mixing matrix</span></a><a href="../chapters/08-data.html" ><span class="navnum">08</span><span>Learning from empirical data</span></a><a href="../chapters/09-frameworks.html" aria-current="page" class="active"><span class="navnum">09</span><span>Mixing beyond compartmental models</span></a><a href="../chapters/10-time.html" ><span class="navnum">10</span><span>When mixing changes over time</span></a><a href="../chapters/11-transmission.html" ><span class="navnum">11</span><span>From mixing to transmission</span></a><a href="../chapters/12-decisions.html" ><span class="navnum">12</span><span>Choosing a mixing structure</span></a><a href="../chapters/13-ai.html" ><span class="navnum">13</span><span>AI as a modeling assistant</span></a><a href="../chapters/14-applications.html" ><span class="navnum">14</span><span>Four case studies</span></a><a href="../chapters/15-workbook.html" ><span class="navnum">15</span><span>Exercises and worked answers</span></a></nav><div class="side-label">TOOLS & REFERENCE</div><nav aria-label="Tools navigation"><a href="../explorer.html">▦ &nbsp; Matrix explorer</a><a href="../walkthrough.html">▶ &nbsp; Guided derivation</a><a href="../cheatsheet.html">▤ &nbsp; Cheat sheet</a><a href="../technical.html">∑ &nbsp; Technical derivations</a><a href="../decision.html">◇ &nbsp; Decision guide</a><a href="../glossary.html">Aa &nbsp; Glossary</a><a href="../resources.html">⌘ &nbsp; R & Python</a><a href="../references.html">↗ &nbsp; Bibliography</a></nav><p class="side-foot">Free educational resource. No accounts, tracking, or personal data.</p></aside><main id="content" class="main"><div class="topbar"><a href="../index.html">Home</a><span> / </span><span>Chapter 09</span><a class="top-tool" href="../explorer.html">Open explorer ↗</a></div><div class="eyebrow">CHAPTER 09 / 15 <span class="dot">•</span> CORE LEARNING</div><h1>Mixing beyond compartmental models</h1><p class="lead">A shared idea implemented differently in ODEs, networks, agents, and stochastic processes.</p><article class="prose"><h2>Compartmental models</h2>
+<p>A stratified deterministic model uses a matrix to average infectious exposure across groups. Typically, <code>cᵢ Mᵢⱼ</code> specifies how many partnership opportunities a person in group i directs toward j, and a transmission term then weights the prevalence or availability of infectious partners in group j. Care is needed to avoid double-counting sex acts or protection modifiers.</p>
+<div class="equation" role="math">λ<sub>i</sub>(t) = c<sub>i</sub>(t) Σ<sub>j</sub> M<sub>ij</sub>(t) × infectious-risk-from-group-j</div>
+<p>This is a generic schematic, not a universal force-of-infection formula. In some models contact frequency and transmission probability are combined differently.</p>
+<h2>Individual-based and agent-based models</h2>
+<p>Instead of storing only expected flows, agents each carry attributes. The model may draw partner groups using <code>M</code> and then sample a particular partner, respecting availability, partnership duration, and venue constraints. It can represent individual histories and heterogeneous behavior, but incurs computational and data demands. A mixing matrix can still be an aggregate <strong>target</strong> or diagnostic for simulated links.</p>
+<h2>Static network models</h2>
+<p>Represent people as nodes and relationships as edges. Mixing can be summarized by counting edges linking types. Two populations can have the same group-level mixing matrix yet very different clustering, degree distributions, and bridge structures. Therefore, a matrix does <strong>not</strong> fully specify a network <a href="../references.html#keeling2005">Keeling &amp; Eames, 2005</a>; <a href="../references.html#bansal2007">Bansal et al., 2007</a>.</p>
+<h2>Temporal networks and partnerships</h2>
+<p>Partnerships form, last, and dissolve. Concurrency—overlap in the timing of partnerships—can influence HIV transmission even when aggregate counts are unchanged. A static matrix does not contain partnership timing <a href="../references.html#kretzschmar1996">Kretzschmar &amp; Morris, 1996</a>.</p>
+<h2>Stochastic epidemic simulations</h2>
+<p>Within a stochastic model, the matrix may define <strong>event probabilities</strong> rather than deterministic mean flows. Individual realizations will not necessarily satisfy exact reciprocity at every moment unless the simulation explicitly creates whole undirected pairs. Long-run expected patterns and realized link counts are distinct.</p>
+<h2>Metapopulation and spatial models</h2>
+<p>Here mixing may mean commuting, visitation, migration, or contact between patches. Movement matrices can be <em>directed</em> and should not automatically be forced into reciprocal partnership form. A commuter departing A for B does not imply a simultaneous departure from B to A.</p>
+<h2>Vector-borne infections</h2>
+<p>Human-to-mosquito and mosquito-to-human encounters represent a two-population transmission system. The relevant host–vector biting totals must be consistent, but a single symmetric human–human contact matrix is not the correct abstraction.</p>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>What is explicitly represented?</th>
+<th>Mixing's role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stratified ODE</td>
+<td>Group-level counts</td>
+<td>Expected cross-group exposure</td>
+</tr>
+<tr>
+<td>Agent-based</td>
+<td>Individual agents</td>
+<td>Partner-selection rule or emergent summary</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Specific links</td>
+<td>Edge structure and cross-type connections</td>
+</tr>
+<tr>
+<td>Temporal network</td>
+<td>Links over time</td>
+<td>Formation, dissolution, concurrency</td>
+</tr>
+<tr>
+<td>Spatial/metapopulation</td>
+<td>Patches and movement</td>
+<td>Mobility or interpatch contacts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule:</strong> decide what an interaction means in the framework <em>before</em> borrowing a mixing formula.</p>
+</article><div class="chapter-nav"><a href="08-data.html">← Previous chapter</a><a href="10-time.html">Next chapter →</a></div><footer><div><strong>Mixing Matters</strong><br>Learn the mechanism. Check the mathematics. Document the assumptions.</div><div><a href="../references.html">Sources</a> · <a href="../resources.html">Reproducibility</a> · <a href="../README.md">README</a></div></footer></main></div><script src="../assets/site.js" defer></script></body></html>

@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Your safest baseline—and a useful mathematical reference point."><title>Proportionate mixing, step by step · Mixing Matters</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip" href="#content">Skip to content</a><div class="layout"><aside class="sidebar"><div class="side-top"><a class="brand" href="../index.html"><span class="brand-icon">∿</span> Mixing Matters</a><p>Understanding how populations connect—and why the equations work.</p></div><details class="mobile-nav"><summary>☰ &nbsp; Browse lessons & tools</summary><div class="mobile-nav-content"><a href="../explorer.html">Matrix explorer</a><a href="../walkthrough.html">Guided derivation</a><a href="../decision.html">Decision guide</a><a href="../cheatsheet.html">Cheat sheet</a><a href="../technical.html">Technical derivations</a><a href="../references.html">References</a><a href="../chapters/01-why-mixing.html">1. Why mixing matters</a><a href="../chapters/02-language.html">2. The vocabulary of mixing</a><a href="../chapters/03-opportunities.html">3. From populations to opportunity shares</a><a href="../chapters/04-proportionate.html">4. Proportionate mixing, step by step</a><a href="../chapters/05-reciprocity.html">5. Reciprocity without mystery</a><a href="../chapters/06-assortativity.html">6. Assortativity and preferred mixing</a><a href="../chapters/07-two-axes.html">7. Two characteristics, one mixing matrix</a><a href="../chapters/08-data.html">8. Learning from empirical data</a><a href="../chapters/09-frameworks.html">9. Mixing beyond compartmental models</a><a href="../chapters/10-time.html">10. When mixing changes over time</a><a href="../chapters/11-transmission.html">11. From mixing to transmission</a><a href="../chapters/12-decisions.html">12. Choosing a mixing structure</a><a href="../chapters/13-ai.html">13. AI as a modeling assistant</a><a href="../chapters/14-applications.html">14. Four case studies</a><a href="../chapters/15-workbook.html">15. Exercises and worked answers</a></div></details><div class="side-label">LEARN · 15 CHAPTERS</div><nav aria-label="Chapter navigation"><a href="../chapters/01-why-mixing.html" ><span class="navnum">01</span><span>Why mixing matters</span></a><a href="../chapters/02-language.html" ><span class="navnum">02</span><span>The vocabulary of mixing</span></a><a href="../chapters/03-opportunities.html" ><span class="navnum">03</span><span>From populations to opportunity shares</span></a><a href="../chapters/04-proportionate.html" aria-current="page" class="active"><span class="navnum">04</span><span>Proportionate mixing, step by step</span></a><a href="../chapters/05-reciprocity.html" ><span class="navnum">05</span><span>Reciprocity without mystery</span></a><a href="../chapters/06-assortativity.html" ><span class="navnum">06</span><span>Assortativity and preferred mixing</span></a><a href="../chapters/07-two-axes.html" ><span class="navnum">07</span><span>Two characteristics, one mixing matrix</span></a><a href="../chapters/08-data.html" ><span class="navnum">08</span><span>Learning from empirical data</span></a><a href="../chapters/09-frameworks.html" ><span class="navnum">09</span><span>Mixing beyond compartmental models</span></a><a href="../chapters/10-time.html" ><span class="navnum">10</span><span>When mixing changes over time</span></a><a href="../chapters/11-transmission.html" ><span class="navnum">11</span><span>From mixing to transmission</span></a><a href="../chapters/12-decisions.html" ><span class="navnum">12</span><span>Choosing a mixing structure</span></a><a href="../chapters/13-ai.html" ><span class="navnum">13</span><span>AI as a modeling assistant</span></a><a href="../chapters/14-applications.html" ><span class="navnum">14</span><span>Four case studies</span></a><a href="../chapters/15-workbook.html" ><span class="navnum">15</span><span>Exercises and worked answers</span></a></nav><div class="side-label">TOOLS & REFERENCE</div><nav aria-label="Tools navigation"><a href="../explorer.html">▦ &nbsp; Matrix explorer</a><a href="../walkthrough.html">▶ &nbsp; Guided derivation</a><a href="../cheatsheet.html">▤ &nbsp; Cheat sheet</a><a href="../technical.html">∑ &nbsp; Technical derivations</a><a href="../decision.html">◇ &nbsp; Decision guide</a><a href="../glossary.html">Aa &nbsp; Glossary</a><a href="../resources.html">⌘ &nbsp; R & Python</a><a href="../references.html">↗ &nbsp; Bibliography</a></nav><p class="side-foot">Free educational resource. No accounts, tracking, or personal data.</p></aside><main id="content" class="main"><div class="topbar"><a href="../index.html">Home</a><span> / </span><span>Chapter 04</span><a class="top-tool" href="../explorer.html">Open explorer ↗</a></div><div class="eyebrow">CHAPTER 04 / 15 <span class="dot">•</span> CORE LEARNING</div><h1>Proportionate mixing, step by step</h1><p class="lead">Your safest baseline—and a useful mathematical reference point.</p><article class="prose"><h2>The underlying experiment</h2>
+<p>Imagine putting every partnership end from every group into one large pool. To choose a partner for an end from HP, draw from the pool in proportion to how many ends each group contributes. The resulting destination probability does <strong>not</strong> depend on whether the starting end comes from HP, LP, HV, or LV.</p>
+<div class="equation" role="math">M<sub>ij</sub> = Q<sub>j</sub> / Q, &nbsp; where Q = Σ<sub>k</sub>Q<sub>k</sub></div>
+<p>With the synthetic opportunity vector <code>[400, 200, 200, 300]</code>, every row of the matrix is:</p>
+<table>
+<thead>
+<tr>
+<th>From ↓ / To →</th>
+<th style="text-align:right">HP</th>
+<th style="text-align:right">LP</th>
+<th style="text-align:right">HV</th>
+<th style="text-align:right">LV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HP</td>
+<td style="text-align:right">0.364</td>
+<td style="text-align:right">0.182</td>
+<td style="text-align:right">0.182</td>
+<td style="text-align:right">0.273</td>
+</tr>
+<tr>
+<td>LP</td>
+<td style="text-align:right">0.364</td>
+<td style="text-align:right">0.182</td>
+<td style="text-align:right">0.182</td>
+<td style="text-align:right">0.273</td>
+</tr>
+<tr>
+<td>HV</td>
+<td style="text-align:right">0.364</td>
+<td style="text-align:right">0.182</td>
+<td style="text-align:right">0.182</td>
+<td style="text-align:right">0.273</td>
+</tr>
+<tr>
+<td>LV</td>
+<td style="text-align:right">0.364</td>
+<td style="text-align:right">0.182</td>
+<td style="text-align:right">0.182</td>
+<td style="text-align:right">0.273</td>
+</tr>
+</tbody>
+</table>
+<h2>Why every row sums to one</h2>
+<p>Each row adds <code>(400+200+200+300)/1100 = 1</code>. The entries are probabilities of <strong>where an end goes</strong>, conditional on its starting group.</p>
+<h2>Why reciprocity holds automatically</h2>
+<p>For any pair <code>i,j</code>, the flow from i to j equals <code>Qᵢ(Qⱼ/Q) = QᵢQⱼ/Q</code>. Swap the indices and you get the same expression. The equality is algebraic; it does not depend on the actual sizes of the four groups.</p>
+<div class="equation" role="math">Q<sub>i</sub>M<sub>ij</sub> = Q<sub>i</sub>Q<sub>j</sub>/Q = Q<sub>j</sub>M<sub>ji</sub></div>
+<h2>Is this the same as completely random contacts?</h2>
+<p>Not always. The phrase <em>random mixing</em> is used inconsistently across fields. Here it means <strong>proportionate selection among partnership opportunities</strong> with no extra preference based on group labels. It does not imply that each person has the same rate, and it does not represent household persistence or concurrency. Always state the mathematical definition.</p>
+<h2>When this baseline is helpful</h2>
+<p>It is a transparent benchmark when partner-to-partner data are unavailable. It isolates the consequences of unequal group sizes and unequal rates before introducing assortativity. A difference in the high-activity distribution across meeting contexts is entirely compatible with this baseline.</p>
+<h2>Limits</h2>
+<p>Proportionate mixing might underrepresent within-age contacts, repeated partners, venue segregation, household structure, or geographic separation. Evidence from social-contact diaries and sexual partnership studies motivates exploring richer structures when the research question demands them <a href="../references.html#mossong2008">Mossong et al., 2008</a>; <a href="../references.html#garnett1993">Garnett &amp; Anderson, 1993</a>.</p>
+<details><summary>Why are there nonzero HP-to-HP flows?</summary><p>Because proportionate selection includes all available ends, including same-group ends. Zero assortativity is not the same as forced disassortativity.</p></details>
+</article><div class="chapter-nav"><a href="03-opportunities.html">← Previous chapter</a><a href="05-reciprocity.html">Next chapter →</a></div><footer><div><strong>Mixing Matters</strong><br>Learn the mechanism. Check the mathematics. Document the assumptions.</div><div><a href="../references.html">Sources</a> · <a href="../resources.html">Reproducibility</a> · <a href="../README.md">README</a></div></footer></main></div><script src="../assets/site.js" defer></script></body></html>

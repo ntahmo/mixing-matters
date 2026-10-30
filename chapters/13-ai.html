@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Where AI helps, where it fails, and how to keep the science reproducible."><title>AI as a modeling assistant · Mixing Matters</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"></head><body><a class="skip" href="#content">Skip to content</a><div class="layout"><aside class="sidebar"><div class="side-top"><a class="brand" href="../index.html"><span class="brand-icon">∿</span> Mixing Matters</a><p>Understanding how populations connect—and why the equations work.</p></div><details class="mobile-nav"><summary>☰ &nbsp; Browse lessons & tools</summary><div class="mobile-nav-content"><a href="../explorer.html">Matrix explorer</a><a href="../walkthrough.html">Guided derivation</a><a href="../decision.html">Decision guide</a><a href="../cheatsheet.html">Cheat sheet</a><a href="../technical.html">Technical derivations</a><a href="../references.html">References</a><a href="../chapters/01-why-mixing.html">1. Why mixing matters</a><a href="../chapters/02-language.html">2. The vocabulary of mixing</a><a href="../chapters/03-opportunities.html">3. From populations to opportunity shares</a><a href="../chapters/04-proportionate.html">4. Proportionate mixing, step by step</a><a href="../chapters/05-reciprocity.html">5. Reciprocity without mystery</a><a href="../chapters/06-assortativity.html">6. Assortativity and preferred mixing</a><a href="../chapters/07-two-axes.html">7. Two characteristics, one mixing matrix</a><a href="../chapters/08-data.html">8. Learning from empirical data</a><a href="../chapters/09-frameworks.html">9. Mixing beyond compartmental models</a><a href="../chapters/10-time.html">10. When mixing changes over time</a><a href="../chapters/11-transmission.html">11. From mixing to transmission</a><a href="../chapters/12-decisions.html">12. Choosing a mixing structure</a><a href="../chapters/13-ai.html">13. AI as a modeling assistant</a><a href="../chapters/14-applications.html">14. Four case studies</a><a href="../chapters/15-workbook.html">15. Exercises and worked answers</a></div></details><div class="side-label">LEARN · 15 CHAPTERS</div><nav aria-label="Chapter navigation"><a href="../chapters/01-why-mixing.html" ><span class="navnum">01</span><span>Why mixing matters</span></a><a href="../chapters/02-language.html" ><span class="navnum">02</span><span>The vocabulary of mixing</span></a><a href="../chapters/03-opportunities.html" ><span class="navnum">03</span><span>From populations to opportunity shares</span></a><a href="../chapters/04-proportionate.html" ><span class="navnum">04</span><span>Proportionate mixing, step by step</span></a><a href="../chapters/05-reciprocity.html" ><span class="navnum">05</span><span>Reciprocity without mystery</span></a><a href="../chapters/06-assortativity.html" ><span class="navnum">06</span><span>Assortativity and preferred mixing</span></a><a href="../chapters/07-two-axes.html" ><span class="navnum">07</span><span>Two characteristics, one mixing matrix</span></a><a href="../chapters/08-data.html" ><span class="navnum">08</span><span>Learning from empirical data</span></a><a href="../chapters/09-frameworks.html" ><span class="navnum">09</span><span>Mixing beyond compartmental models</span></a><a href="../chapters/10-time.html" ><span class="navnum">10</span><span>When mixing changes over time</span></a><a href="../chapters/11-transmission.html" ><span class="navnum">11</span><span>From mixing to transmission</span></a><a href="../chapters/12-decisions.html" ><span class="navnum">12</span><span>Choosing a mixing structure</span></a><a href="../chapters/13-ai.html" aria-current="page" class="active"><span class="navnum">13</span><span>AI as a modeling assistant</span></a><a href="../chapters/14-applications.html" ><span class="navnum">14</span><span>Four case studies</span></a><a href="../chapters/15-workbook.html" ><span class="navnum">15</span><span>Exercises and worked answers</span></a></nav><div class="side-label">TOOLS & REFERENCE</div><nav aria-label="Tools navigation"><a href="../explorer.html">▦ &nbsp; Matrix explorer</a><a href="../walkthrough.html">▶ &nbsp; Guided derivation</a><a href="../cheatsheet.html">▤ &nbsp; Cheat sheet</a><a href="../technical.html">∑ &nbsp; Technical derivations</a><a href="../decision.html">◇ &nbsp; Decision guide</a><a href="../glossary.html">Aa &nbsp; Glossary</a><a href="../resources.html">⌘ &nbsp; R & Python</a><a href="../references.html">↗ &nbsp; Bibliography</a></nav><p class="side-foot">Free educational resource. No accounts, tracking, or personal data.</p></aside><main id="content" class="main"><div class="topbar"><a href="../index.html">Home</a><span> / </span><span>Chapter 13</span><a class="top-tool" href="../explorer.html">Open explorer ↗</a></div><div class="eyebrow">CHAPTER 13 / 15 <span class="dot">•</span> CORE LEARNING</div><h1>AI as a modeling assistant</h1><p class="lead">Where AI helps, where it fails, and how to keep the science reproducible.</p><article class="prose"><h2>A useful collaborator, not a mathematical authority</h2>
+<p>AI tools can explain notation, sketch code, translate between R and Python, suggest unit tests, organize literature, and help prepare plain-language explanations. They can also generate equations that look credible while quietly violating probability normalization or reciprocity. Treat each equation as a claim to verify.</p>
+<h2>A reproducible AI workflow</h2>
+<p><strong>1. Specify the task precisely.</strong> “Construct a 4×4 partner mixing matrix for undirected partnerships, positive Q, two strata, and exact reciprocity.” <strong>2. Ask for invariants.</strong> Require rows to sum to one and <code>QᵢMᵢⱼ=QⱼMⱼᵢ</code>. <strong>3. Require limit cases.</strong> Verify that zero preferences recover joint proportionate mixing. <strong>4. Execute tests independently.</strong> Generate unequal and correlated opportunity distributions. <strong>5. Audit assumptions.</strong> Ask whether a parameter is a mixture weight, log-affinity, or direct data estimate. <strong>6. Preserve provenance.</strong> Commit code, test results, sources, and relevant AI-assisted development decisions.</p>
+<h2>A worked failure you can recognize</h2>
+<p>An AI assistant suggests <code>Mᵣₘ,ᵣ′ₘ′ = P(r′|r)P(m′|m)</code> with separate partially assortative kernels built from marginal opportunity shares. This seems intuitive; rows sum to one. But if activity and meeting context are correlated, the zero-preference limit fails to recover <code>Qᵣ′ₘ′/Q</code>. If the opportunity distribution factorizes exactly and each one-axis kernel is reciprocal with respect to its own marginal opportunities, their product is reciprocal. But that special condition generally fails when the two characteristics are associated. <strong>The fix is not a prettier explanation; it is a mathematically valid construction with tests.</strong></p>
+<h2>An evaluation checklist</h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Required evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the citation exist?</td>
+<td>Resolve DOI/publisher page and confirm the actual claim</td>
+</tr>
+<tr>
+<td>Does the equation normalize?</td>
+<td>Numerical test across varied group sizes</td>
+</tr>
+<tr>
+<td>Is reciprocity correct?</td>
+<td>Check flow equality, not probability equality</td>
+</tr>
+<tr>
+<td>Are units coherent?</td>
+<td>Explicit dimension analysis</td>
+</tr>
+<tr>
+<td>Is the code reproducible?</td>
+<td>Versioned files, test inputs, expected outputs</td>
+</tr>
+<tr>
+<td>Is evidence distinguished from invention?</td>
+<td>Mark synthetic examples, assumptions and extrapolations</td>
+</tr>
+</tbody>
+</table>
+<h2>AI in data-intensive modeling</h2>
+<p>It can assist with schema matching, data cleaning suggestions, imputation strategies and computational debugging, but human investigators must assess bias, confidentiality, consent and scientific appropriateness. Do not send identifiable partner or patient records into unapproved tools. WHO guidance on large multimodal models emphasizes governance and risk assessment in health applications <a href="../references.html#who2025">WHO, 2025</a>.</p>
+<h2>Prompt template</h2>
+<blockquote>
+<p>Explain the mixing model for a beginner. Define every symbol and unit, derive its zero-preference limit, prove or numerically check normalization and reciprocity, then supply independent R and Python unit tests. Identify which claims are supported by citations and which are new modeling assumptions. Do not invent data or references.</p>
+</blockquote>
+<p><strong>Practical rule:</strong> AI can accelerate the work of checking mathematics, but cannot replace checking mathematics.</p>
+</article><div class="chapter-nav"><a href="12-decisions.html">← Previous chapter</a><a href="14-applications.html">Next chapter →</a></div><footer><div><strong>Mixing Matters</strong><br>Learn the mechanism. Check the mathematics. Document the assumptions.</div><div><a href="../references.html">Sources</a> · <a href="../resources.html">Reproducibility</a> · <a href="../README.md">README</a></div></footer></main></div><script src="../assets/site.js" defer></script></body></html>
