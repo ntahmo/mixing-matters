@@ -1,8 +1,8 @@
 # Mixing Matters
 
-**An interactive textbook and practical handbook on mixing in infectious-disease models.**
+**An interactive textbook and practical handbook on mixing in infectious disease models.**
 
-The audience includes beginners in mathematical epidemiology, infectious-disease researchers, public health practitioners, and community collaborators. The running example uses four fictional activity/partner-meeting groups, but the methods extend to contact matrices, networks, individual-based models, stochastic models, and movement systems.
+The audience includes beginners in mathematical epidemiology, infectious disease researchers, public health practitioners, and community collaborators. The running example uses four fictional activity/partner-meeting groups, but the methods extend to contact matrices, networks, individual-based models, stochastic models, and movement systems.
 
 ## Open it
 
@@ -49,7 +49,7 @@ This is **an educational resource**, not a systematic literature review or a pee
 
 ## Project status and future contributions
 
-This release is a substantial, tested teaching edition. Further scholarly development could include a systematic reference audit, annotated implementations for selected empirical datasets, richer accessibility reviews, additional applications, and expert feedback on the more advanced mathematical sections. Findings should be version-controlled and peer reviewed before any claims of a validated epidemiological model.
+This release is a substantial, tested teaching edition. Further scholarly development could include a systematic reference audit, annotated implementations for selected empirical datasets, richer accessibility reviews, additional applications, and expert feedback on the more advanced mathematical sections. Findings should be version-controlled and peer-reviewed before any claims of a validated epidemiological model.
 
 ## Attribution and license
 
